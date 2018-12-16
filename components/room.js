@@ -12,7 +12,7 @@ class room{
         this.count=this.count+1    
     }
     isAllowed(){
-      return  this.active==1 && this.started==false && this.count < 2
+      return  this.active==1 && this.started==false && this.count < 3
     }
     startRoom(){
       this.started=true
