@@ -67,7 +67,6 @@ module.exports=(server)=>{
                 console.log("user disconnected,total users")
                 world.removePlayerFromRoom(socket.id)
                 console.log(player.instances.length)
-
                 console.log(room.instances.length)
 
             }

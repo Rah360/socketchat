@@ -11,7 +11,7 @@ world.prototype.listAll = function(item) {
 //get active rooms
 world.prototype.listActive = function(item) {
   return this.rooms.filter(x => {
-      if (x.players.length < 3 && x.active == 1 && x.started == false) {
+      if (x.players.length < 4 && x.active == 1 && x.started == false) {
           return x
       }
   })
