@@ -37,7 +37,7 @@ module.exports=(server)=>{
         
         //get room which user joined by room id and socket id
         socket.on('getRoom',(data,callback)=>{
-                let getRoomObj=world.getRoomByPlayeridRoomid(data.roomid,data.playerid)
+                let getRoomObj=world.getRoomByPlayeridRoomid(data.room,data.playerid)
                 if(getRoomObj){
                     callback(JSON.stringify(getRoomObj))
                 }else{
@@ -61,7 +61,7 @@ module.exports=(server)=>{
             }
             // callback(roomid)
         })
-
+       
         socket.on("disconnect",()=>{
             if(socket.id){
                 console.log("user disconnected,total users")
